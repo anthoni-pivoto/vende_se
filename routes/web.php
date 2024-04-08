@@ -1,18 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\BestController;
+use App\Http\Controllers\AnuncioController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('anuncio', AnuncioController::class);
+
+Route::get('teste',[BestController::class, 'hello']);
