@@ -12,8 +12,12 @@ class AnuncioController extends Controller
     {
         $nome = 'Roger';
         $sobrenome = 'Machado';
+<<<<<<< HEAD
         //return view('index', compact('nome', 'sobrenome'));
         return compact('nome','sobrenome');
+=======
+        return view('index', compact('nome', 'sobrenome'));
+>>>>>>> 225a56dfdc26eab88f556ab296ab68833ca2f258
     }
 
     /**

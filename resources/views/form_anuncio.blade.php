@@ -16,5 +16,8 @@
     <input class="botao" type="submit" name="submit" value="Logar">
 </form>
 <a href={{route('anuncio.index')}}>Link para o método index </a>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 225a56dfdc26eab88f556ab296ab68833ca2f258
 @endsection
