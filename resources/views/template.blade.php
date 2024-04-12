@@ -9,25 +9,13 @@
         <div class="logo">
             <img src="{{ asset('images/logo.png') }}" alt="Logo da Empresa">
         </div>
-<<<<<<< HEAD
-=======
-        <div class="espaco">
-            @section('sidebar')
-                Sidebar
-            @show
-        </div>
->>>>>>> 225a56dfdc26eab88f556ab296ab68833ca2f258
         <div class="botoes">
-            <button>Botão 1</button>
-            <button>Botão 2</button>
+            <button><a href="{{ asset('login') }}">login</a></button>
+            <button><a href="{{ asset('register') }}">register</a></button>
             <button>Botão 3</button>
         </div>
         </header>
-<<<<<<< HEAD
         <main class="main-content">
-=======
-        <main>
->>>>>>> 225a56dfdc26eab88f556ab296ab68833ca2f258
             @yield('content')
         </main>
         <footer class="rodape" id="contato">

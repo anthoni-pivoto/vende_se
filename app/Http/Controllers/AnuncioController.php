@@ -2,22 +2,22 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class AnuncioController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
+    public function __construct()
+    {
+        $this->middleware('auth')->only(['create', 'update', 'destroy']);
+    }    
+
     public function index()
     {
         $nome = 'Roger';
         $sobrenome = 'Machado';
-<<<<<<< HEAD
         //return view('index', compact('nome', 'sobrenome'));
         return compact('nome','sobrenome');
-=======
-        return view('index', compact('nome', 'sobrenome'));
->>>>>>> 225a56dfdc26eab88f556ab296ab68833ca2f258
     }
 
     /**
