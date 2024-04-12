@@ -11,7 +11,7 @@ class Anuncio extends Model
     protected $fillable = [
         "name","description","value"
     ];
-    protected $attributes = [
-        'useId' => $user = Auth::user();
-    ]
+    // protected $attributes = [
+    //     'useId' => $user = Auth::user()
+    // ];
 }

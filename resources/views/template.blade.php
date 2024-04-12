@@ -1,7 +1,7 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="{{ asset('css/style_template.css') }}" rel="stylesheet">
+        <link @yield('css-style') rel="stylesheet">
         <title>@yield('title') – Exemplo View</title>
     </head>
     <body>
