@@ -2,22 +2,18 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Route;
 use App\Models\Anuncio;
-use Illuminate\Support\Facades\Auth;
 
 
 class AnuncioController extends Controller
 {
-    public function __construct()
-    {
-        $this->middleware('auth')->only(['create', 'update', 'destroy']);
-    }    
-
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
         $anuncios = Anuncio::all();
-        return view('anuncio_index', compact('anuncios'));
+        return view('anuncio_index', compact('anuncios'));        
     }
 
     /**
@@ -25,7 +21,7 @@ class AnuncioController extends Controller
      */
     public function create()
     {
-        return view('form_anuncio');
+        //
     }
 
     /**
@@ -33,10 +29,7 @@ class AnuncioController extends Controller
      */
     public function store(Request $request)
     {
-        Anuncio::create($request->all());
-        return redirect()->route('anuncio.index')->with('success','Anuncio criado com sucesso.');
-        // $dataForm = $request->except('_token');
-        // return $dataForm;
+        //
     }
 
     /**
@@ -44,8 +37,7 @@ class AnuncioController extends Controller
      */
     public function show(string $id)
     {
-        $anuncio = Anuncio::find($id);
-        return view('anuncio_show', compact('anuncios'));
+        //
     }
 
     /**
@@ -53,8 +45,7 @@ class AnuncioController extends Controller
      */
     public function edit(string $id)
     {
-        $anuncio = Anuncio::find($id);
-        return view('anuncios_edit', compact('post'));
+        //
     }
 
     /**
@@ -62,9 +53,7 @@ class AnuncioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $anuncio = Anuncio::find($id);
-        $anuncio->update($request->all());
-        return redirect()->route('anuncio.index') ->with('success', 'Anuncio atualizado.');
+        //
     }
 
     /**
@@ -72,8 +61,6 @@ class AnuncioController extends Controller
      */
     public function destroy(string $id)
     {
-        $anuncio = Anuncio::find($id);
-        $anuncio->delete();
-        return redirect()->route('anuncio.index')->with('success', 'Anuncio deletado');
+        //
     }
 }

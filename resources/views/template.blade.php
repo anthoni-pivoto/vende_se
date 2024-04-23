@@ -10,9 +10,9 @@
             <img src="{{ asset('images/logo.png') }}" alt="Logo da Empresa">
         </div>
         <div class="botoes">
-            <button><a href="{{ asset('login') }}">login</a></button>
-            <button><a href="{{ asset('register') }}">register</a></button>
-            <button>Botão 3</button>
+            <button><a href="{{ asset('/') }}" class="botao-header">Home</a></button>
+            <button><a href="{{ asset('anuncio') }}" class="botao-header">Anuncios</a></button>
+            <button><a href="{{ asset('profile') }}" class="botao-header">Perfil</a></button>
         </div>
         </header>
         <main class="main-content">

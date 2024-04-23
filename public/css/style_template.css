@@ -8,27 +8,48 @@
 body {
     width: 100%;
     display: flex;
+    /* justify-content: center; */
+    align-items: center;
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
- 
     overflow-x: hidden;
 }
 
 /* MAIN */
 .main-content{
-    display: grid;
+    border-radius: 10%;
+    display: flex;
     justify-content: center;
     align-items: center;
     flex-grow: 1;
+    margin: 1%;
     padding: 1%;
     width: 70%;
     background-color: aqua;
 }
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+.tabela th {
+    background-color: #bebebe;
+}
+
+
 /* /MAIN */
  
 /* HEADER */
 header {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -36,6 +57,11 @@ header {
     /* background: linear-gradient(to right, #010317, #C8FF78);*/
     background-color: #010317;
     color: #fff; 
+}
+
+.botao-header{
+    text-decoration: none;
+
 }
 
 .logo img {
@@ -75,7 +101,7 @@ header {
     background-color: #010317;
     color: white;
     height: 25%;
-    max-width: 100%;
+    width: 100%;
     font-size: 14px;
     font-family: helvetica;
     padding: 10px;
@@ -105,7 +131,7 @@ header {
     color: white;
 }
 .rodape-direitos{
-    width: 100%;
+    width: 105%;
     color: black;
     background-color: #C8FF52;
     padding: 10px;

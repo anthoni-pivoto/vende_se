@@ -9,9 +9,12 @@ class Anuncio extends Model
 {
     use HasFactory;
     protected $fillable = [
-        "name","description","value"
+        'name',
+        'description',
+        'value',
+        'userId'
     ];
     // protected $attributes = [
-    //     'useId' => $user = Auth::user()
+    //     'useId' => $user = Auth::id()
     // ];
 }
