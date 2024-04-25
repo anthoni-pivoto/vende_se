@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Anuncio;
 
@@ -56,12 +57,13 @@ class AnuncioController extends Controller
             $novoNome = $request->file('imagem')->store('imagens', 'public');
             $dados['imagem'] = $novoNome;
         }           
+        $dados['userId'] = Auth::id();
 
         $insert = Anuncio::create($dados);
         if($insert)
-            return redirect()->route('anuncio_index') ->with('success', 'Produto inserido com sucesso!');
+            return redirect()->route('anuncio.index') ->with('success', 'Produto inserido com sucesso!');
         else
-            return redirect()->route('anuncio_create')->with(['error'=> 'Falha ao inserir produto']);
+            return redirect()->route('anuncio.create')->with(['error'=> 'Falha ao inserir produto']);
      
     }
 

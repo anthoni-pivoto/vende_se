@@ -7,6 +7,7 @@
 <p>Anuncios:</p>
 <table class="tabela">
 <tr>
+<th> Imagem </th>    
 <th> Nome </th>
 <th> Descrição </th>
 <th> VALOR </th>
@@ -18,7 +19,7 @@
 @foreach($anuncios as $anuncio)
 <tr>
 <td> <img src="{{ asset("storage/{$anuncio->imagem}") }}" alt="{{$anuncio->imagem}}
-height="42" width="50"">  </td>
+height="40%" width="40%"">  </td>
 <td> {{$anuncio->name}} </td>
 <td> {{$anuncio->description}} </td>
 <td> {{$anuncio->value}} </td>

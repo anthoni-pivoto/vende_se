@@ -13,8 +13,9 @@ class Anuncio extends Model
         'description',
         'value',
         'imagem',
+        'userId',
     ];
-    protected $attributes = [
-        'useId' => $user = Auth::id()
-    ];
+    // protected $attributes = [
+    //     'useId' => $user = Auth::id()
+    // ];
 }
