@@ -1,8 +1,7 @@
 @extends('template')
 @section('title', 'Form create')
-@section('sidebar')
-    @parent
-    <p>ainda nao sei oq é essa side bar</p>
+@section('css-style')
+    href="{{ asset('css/style_template.css') }}"
 @endsection
 @section('content')
 <h3>Login</h3>
@@ -12,7 +11,7 @@
     <input type="text" name="usuario"></br></br>
     Senha:
     <input type="password" name="senha"></br></br>
-    <input class="botao" type="reset" value="Limpar">
+    <input class="botao" type="reset" value="Limpar">                                       
     <input class="botao" type="submit" name="submit" value="Logar">
 </form>
 <a href={{route('anuncio.index')}}>Link para o método index </a>
