@@ -10,6 +10,25 @@ class AnuncioController extends Controller
     /**
      * Display a listing of the resource.
      */
+
+    
+    // public function salvar(Request $request){
+    //     $dados = $request->except('_token');
+    //     $anuncio = new Anuncio();
+    //     //$this->validate($request, $anuncio->rules, $anuncio->messages); 
+        
+    //     if ($request->hasFile('imagem')){ // testa se foi enviado um imagem no formulário
+    //         $novoNome = $request->file('imagem')->store('imagens', 'public');
+    //         $dados['imagem'] = $novoNome;
+    //     }           
+
+    //     $insert = Anuncio::create($dados);
+    //     if($insert)
+    //         return redirect()->route('anuncio_index') ->with('success', 'Produto inserido com sucesso!');
+    //     else
+    //         return redirect()->route('anuncio_create')->with(['error'=> 'Falha ao inserir produto']);
+    // }
+
     public function index()
     {
         $anuncios = Anuncio::all();
@@ -21,7 +40,7 @@ class AnuncioController extends Controller
      */
     public function create()
     {   
-        return view('anuncio_create');
+        return view('anuncio_form');
     }
 
     /**
@@ -29,7 +48,21 @@ class AnuncioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dados = $request->except('_token');
+        //$anuncio = new Anuncio();
+        //$this->validate($request, $anuncio->rules, $anuncio->messages); 
+        
+        if ($request->hasFile('imagem')){ // testa se foi enviado um imagem no formulário
+            $novoNome = $request->file('imagem')->store('imagens', 'public');
+            $dados['imagem'] = $novoNome;
+        }           
+
+        $insert = Anuncio::create($dados);
+        if($insert)
+            return redirect()->route('anuncio_index') ->with('success', 'Produto inserido com sucesso!');
+        else
+            return redirect()->route('anuncio_create')->with(['error'=> 'Falha ao inserir produto']);
+     
     }
 
     /**

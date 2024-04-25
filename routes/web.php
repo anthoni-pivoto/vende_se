@@ -8,6 +8,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('form', function(){
+    return view('anuncio_form');
+});
+
 Route::resource('anuncio', AnuncioController::class);
 
 Route::get('/dashboard', function () {

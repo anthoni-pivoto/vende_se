@@ -17,6 +17,8 @@
 </tr>
 @foreach($anuncios as $anuncio)
 <tr>
+<td> <img src="{{ asset("storage/{$anuncio->imagem}") }}" alt="{{$anuncio->imagem}}
+height="42" width="50"">  </td>
 <td> {{$anuncio->name}} </td>
 <td> {{$anuncio->description}} </td>
 <td> {{$anuncio->value}} </td>

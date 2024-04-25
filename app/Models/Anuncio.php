@@ -12,9 +12,9 @@ class Anuncio extends Model
         'name',
         'description',
         'value',
-        'userId'
+        'imagem',
     ];
-    // protected $attributes = [
-    //     'useId' => $user = Auth::id()
-    // ];
+    protected $attributes = [
+        'useId' => $user = Auth::id()
+    ];
 }
