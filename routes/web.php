@@ -8,9 +8,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('form', function(){
-    return view('anuncio_form');
-});
+// Route::get('form', function(){
+//     return view('anuncio_form');
+// });
+
+Route::get('/editar/{id}', [AnuncioController::class, 'editar']);
+Route::post('/atualizar/{id}', [AnuncioController::class, 'atualizar']);
+Route::get('/apagar/{id}', [AnuncioController::class, 'apagar']);
+
+
 
 Route::resource('anuncio', AnuncioController::class);
 

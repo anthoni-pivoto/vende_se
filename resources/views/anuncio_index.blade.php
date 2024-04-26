@@ -23,8 +23,8 @@ height="40%" width="40%"">  </td>
 <td> {{$anuncio->name}} </td>
 <td> {{$anuncio->description}} </td>
 <td> {{$anuncio->value}} </td>
-<td><button>Editar</button></td>
-<td><button>Apagar</button></td>
+<td><button><a href="editar/{{$anuncio['id']}}">Editar</a></button></td>
+<td><button><a href="apagar/{{$anuncio['id']}}">Apagar</a></button></td>
 <td><button>Vizualizar</button></td>
 @endforeach
 </tr>

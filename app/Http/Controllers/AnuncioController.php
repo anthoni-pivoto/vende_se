@@ -30,6 +30,44 @@ class AnuncioController extends Controller
     //         return redirect()->route('anuncio_create')->with(['error'=> 'Falha ao inserir produto']);
     // }
 
+    public function editar($id){
+
+        $anuncio = Anuncio::find($id);
+        return view('anuncio_update', compact('anuncio'));
+    }
+
+    public function apagar($id){
+        $anuncio = Anuncio::find($id);
+        // if($anuncio->getAttributes()['imagem'] !=NULL) // testa se tinha um nome de arquivo no banco
+        //     Storage::disk('public')->delete($anuncio->getAttributes()['imagem']);
+        $deletar = $anuncio->delete();
+        if($deletar)
+            return redirect()->route('anuncio.index')->with('success', 'Produto removido com sucesso!');
+        else
+             return redirect()->route('anuncio.index')->with(['erros'=> 'Falha ao remover produto']);
+
+    }
+
+    public function atualizar(Request $request, $id){
+        $dados = $request->except('_token', 'submit');
+        $anuncio = Anuncio::find($id);
+        // $this->validate($request, $anuncio->rules, $anuncio->messages);
+        // if ($request->hasFile('imagem'))
+        //     {
+        //         if($anuncio->getAttributes()['imagem'] !=NULL)
+        //             Storage::disk('public')->delete($anuncio->getAttributes()['imagem']);
+        //         $novoNome = $request->file('imagem')->store('imagens', 'public');
+        //         $dados['imagem'] = $novoNome;
+        // }
+        // else
+        //     unset($dados['imagem']);
+        $update = $anuncio->update($dados);
+        if($update)
+            return redirect()->route('anuncio.index')->with('success', 'Produto atualizado com sucesso!');
+        else
+            return redirect()->route('anuncio.edit', $id)->with(['erros'=> 'Falha ao editar']);
+    }
+
     public function index()
     {
         $anuncios = Anuncio::all();
@@ -78,7 +116,7 @@ class AnuncioController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
         //
     }
@@ -86,9 +124,26 @@ class AnuncioController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+        $dados = $request->except('_token', 'submit');
+        $anuncio = Anuncio::find($id);
+        // $this->validate($request, $anuncio->rules, $anuncio->messages);
+        // if ($request->hasFile('imagem'))
+        //     {
+        //         if($anuncio->getAttributes()['imagem'] !=NULL)
+        //             Storage::disk('public')->delete($anuncio->getAttributes()['imagem']);
+        //         $novoNome = $request->file('imagem')->store('imagens', 'public');
+        //         $dados['imagem'] = $novoNome;
+        // }
+        // else
+        //     unset($dados['imagem']);
+        $update = $anuncio->update($dados);
+        if($update)
+            return redirect()->route('anuncio.index')->with('success', 'Produto atualizado com sucesso!');
+        else
+            return redirect()->route('anuncio.edit', $id)->with(['erros'=> 'Falha ao editar']);
+
     }
 
     /**
