@@ -1,4 +1,4 @@
-@extends('template')
+@extends('template_unset')
 @section('title', 'lista')
 @section('css-style')
     href="{{ asset('css/style_template.css') }}"

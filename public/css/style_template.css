@@ -30,19 +30,21 @@ body {
 }
 
 .tabela {
-    width: 100vh;
+    width: fit-content;
+    height: 20vh;
     border-collapse: collapse;
 }
 
 .tabela th, td{
+    
     border: 1px solid black;
     padding: 8px;
     text-align: left;
 }
 
 .imagem_arquivo{
-    max-height: 50vh;
-    max-width: 100%;
+    width: 200px;
+    height: 200px;
 }
 
 .tabela th {

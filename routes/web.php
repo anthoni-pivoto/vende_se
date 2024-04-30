@@ -1,12 +1,21 @@
 <?php
 
+use Illuminate\Pagination\Paginator;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AnuncioController;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Anuncio;
+
 
 Route::get('/', function () {
-    return view('welcome');
+    $anuncios = Anuncio::paginate(2);
+    if(Auth::check()){
+        return view('home', compact('anuncios'));
+    }
+        return view('home_unset', compact('anuncios'));
 });
+
 
 // Route::get('form', function(){
 //     return view('anuncio_form');

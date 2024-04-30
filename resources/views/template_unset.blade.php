@@ -11,9 +11,9 @@
         <a href="{{ asset('/') }}"><img src="{{ asset('images/logo.png') }}" alt="Logo da Empresa"></a>
         </div>
         <div class="botoes">
-            <button><a href="{{ asset('anuncio/create') }}" class="botao-header">Novo Anuncio</a></button>
-            <button><a href="{{ asset('anuncio') }}" class="botao-header">Meus Anuncios</a></button>
-            <button><a href="{{ asset('profile') }}" class="botao-header">Perfil</a></button>
+            <button><a href="{{ asset('/') }}" class="botao-header">Anuncios</a></button>
+            <button><a href="{{ asset('register') }}" class="botao-header">Registrar-se</a></button>
+            <button><a href="{{ asset('login') }}" class="botao-header">Logar</a></button>
         </div>
         </header>
         <main class="main-content">

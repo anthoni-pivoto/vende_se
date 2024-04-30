@@ -14,7 +14,7 @@ enctype="multipart/form-data">
     <input type="text" name="description" value="{{$anuncio->description}}"></br></br>
     Valor item:
     <input type="number" step="0.01" name="value" value="{{$anuncio->value}}"></br></br>
-    <img src="{{ asset("storage/{$anuncio->imagem}") }}" alt="{{$anuncio->imagem}}
+    <img src="{{ asset("storage/{$anuncio->arquivo}") }}" alt="{{$anuncio->imagem}}
     height="40%" width="40%"">
     <br><br>
     <input type="file" name="imagem"></br></br>

@@ -14,7 +14,7 @@ class AnuncioController extends Controller
      */
     public function __construct()
     {
-    $this->middleware('auth')->only(['create', 'atualizar', 'apagar']);
+        $this->middleware('auth')->only(['create', 'index','atualizar', 'apagar']);
     }
 
     public function editar($id){
@@ -56,8 +56,9 @@ class AnuncioController extends Controller
     }
 
     public function index()
-    {
-        $anuncios = Anuncio::paginate(2);
+    {   
+        $id = Auth::id();
+        $anuncios = Anuncio::where('userId', $id )->paginate(2);
         return view('anuncio_index', compact('anuncios'));        
     }
 
