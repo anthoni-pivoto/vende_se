@@ -18,8 +18,8 @@
 </tr>
 @foreach($anuncios as $anuncio)
 <tr>
-<td> <img src="{{ asset("storage/{$anuncio->imagem}") }}" alt="{{$anuncio->imagem}}
-height="40%" width="40%"">  </td>
+<td> <img src="{{ asset("storage/{$anuncio->arquivo}") }}" alt="{{$anuncio->imagem}}
+height="40%" width="40%"" class="imagem_arquivo">  </td>
 <td> {{$anuncio->name}} </td>
 <td> {{$anuncio->description}} </td>
 <td> {{$anuncio->value}} </td>
@@ -28,5 +28,8 @@ height="40%" width="40%"">  </td>
 <td><button>Vizualizar</button></td>
 @endforeach
 </tr>
+
 </table>
+
+{!! $anuncios->links() !!}
 @endsection

@@ -12,7 +12,7 @@ class Anuncio extends Model
         'name',
         'description',
         'value',
-        'imagem',
+        'arquivo',
         'userId',
     ];
     // protected $attributes = [

@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('description');
-            $table->string('imagem');
+            $table->string('arquivo');
             $table->float('value');
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users');

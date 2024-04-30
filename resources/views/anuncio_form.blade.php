@@ -13,7 +13,7 @@
     <input type="text" name="description"></br></br>
     Valor item:
     <input type="number" step="0.01" name="value"></br></br>
-    <input type="file" name="imagem"></br></br>
+    <input type="file" name="arquivo"></br></br>
     <input class="botao" type="reset" value="Limpar">                                       
     <input class="botao" type="submit" name="submit" value="Criar">
 </form>
