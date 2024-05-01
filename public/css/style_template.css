@@ -81,18 +81,19 @@ header {
     justify-content: space-evenly;
     margin-left: 1%;
     margin-right: 1%;
-    width: 80%;
+    width: 100%;
 }
 
 .botoes button {
-  padding: 10px 20px;
-  margin-left: 10px;
+  padding: 1vh 1vh 1vh 1vh;
+  margin-left: 0.5vh;
   border: none;
   border-radius: 5px;
   background-color:#C8FF52;
   color: black;
   font-size: 16px;
   cursor: pointer;
+  height: 20%;
   width: 15%;
 }
 
@@ -107,11 +108,10 @@ header {
 .rodape{
     background-color: #010317;
     color: white;
-    height: 25%;
+    height: 20%;
     width: 100%;
     font-size: 14px;
     font-family: helvetica;
-    padding: 10px;
 }
 .rodape a{
     text-decoration: none;
@@ -122,11 +122,13 @@ header {
 }
 .rodape-div{
     display: flex;
+    justify-content: space-between;
     flex-wrap: wrap;
     width:100%;
     margin: auto;
     align-items: stretch;
-    padding: 60px 10px 40px 10px;
+    padding: 4vh 2vh 2vh 2vh;
+    
 }
 .rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
     display: flex;
@@ -138,11 +140,10 @@ header {
     color: white;
 }
 .rodape-direitos{
-    width: 105%;
+    width: 100%;
     color: black;
     background-color: #C8FF52;
     padding: 10px;
-    margin: -10px;
     text-align: center;
 }
 

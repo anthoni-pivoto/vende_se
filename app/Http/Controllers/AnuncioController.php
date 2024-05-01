@@ -18,8 +18,10 @@ class AnuncioController extends Controller
     }
 
     public function editar($id){
-
         $anuncio = Anuncio::find($id);
+        if($anuncio['userId'] != Auth::id()){
+            return redirect()->route('anuncio.index');
+            }
         return view('anuncio_update', compact('anuncio'));
     }
 
@@ -32,7 +34,6 @@ class AnuncioController extends Controller
             return redirect()->route('anuncio.index')->with('success', 'Produto removido com sucesso!');
         else
              return redirect()->route('anuncio.index')->with(['erros'=> 'Falha ao remover produto']);
-
     }
 
     public function atualizar(Request $request, $id){

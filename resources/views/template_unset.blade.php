@@ -53,8 +53,7 @@
                 </div>
             </div>
             </div>
-            <p class="rodape-direitos">Copyright © 2023 – Todos os Direitos Reservados.</p>
         </footer>
-        
+        <div class="rodape-direitos">Copyright © 2023 – Todos os Direitos Reservados.</div>
     </body>
 </html>
