@@ -39,7 +39,10 @@ class AnuncioController extends Controller
     public function atualizar(Request $request, $id){
         $dados = $request->except('_token', 'submit');
         $anuncio = Anuncio::find($id);
-        // $this->validate($request, $anuncio->rules, $anuncio->messages);
+
+        $validate = new Anuncio();
+        $this->validate($request, $validate->rules, $validate->messages); 
+        
         if ($request->hasFile('arquivo'))
             {
                 if($anuncio->getAttributes()['arquivo'] !=NULL)
@@ -71,8 +74,8 @@ class AnuncioController extends Controller
     public function store(Request $request)
     {
         $dados = $request->except('_token');
-        //$anuncio = new Anuncio();
-        //$this->validate($request, $anuncio->rules, $anuncio->messages); 
+        $validate = new Anuncio();
+        $this->validate($request, $validate->rules, $validate->messages); 
         
         if ($request->hasFile('arquivo')){
             $novoNome = $request->file('arquivo')->store('imagens', 'public');
