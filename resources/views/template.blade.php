@@ -31,7 +31,7 @@
                 <div class="rodape-div-2-coluna">
                     <span><b>Contatos</b></span>
                     <p>anthonipivoto@gmail.com</p>
-                    <p>+55 51 99999-0000</p>
+                    <p>+55 51 98505-9805</p>
                 </div>
             </div>
             <div class="rodape-div-3">

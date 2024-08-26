@@ -24,16 +24,16 @@
             <div class="rodape-div-1">
                 <div class="rodape-div-1-coluna">
                     <!-- elemento -->
-                    <span><b>LOGO</b></span>
-                    <p>SIA Trecho 5 lote 000 bloco z sala 900 - Guará, Brasília - DF, 70000-010</p>
+                    <span><b>Site Anuncios</b></span>
+                    <p>IFSul - Gravatai</p>
                 </div>
             </div>
             <div class="rodape-div-2">
                 <div class="rodape-div-2-coluna">
                     <!-- elemento -->
                     <span><b>Contatos</b></span>
-                    <p>contato@na.na</p>
-                    <p>+55 63 99200-0000</p>
+                    <p>anthonipivoto@gmail.com</p>
+                    <p>+55 51 98505-9805</p>
                 </div>
             </div>
             <div class="rodape-div-3">
